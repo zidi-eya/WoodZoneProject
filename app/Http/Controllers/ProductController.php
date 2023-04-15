@@ -14,6 +14,23 @@ class ProductController extends Controller
         return view('pages.shop')->with('products', $products);
     }
 
+    public function search()
+    {
+        request()->validate([
+            'q' => 'required|min:3'
+        ]);
+
+        $q = request()->input('q');
+
+        $products = Product::where('title', 'like', "%$q%")
+                ->orWhere('description', 'like', "%$q%")
+                ->orWhere('subtitle', 'like', "%$q%") 
+                ->paginate(6);
+
+        return view('pages.shop')->with('products', $products);
+    }
+
+
     // public function show($slug)
     // {
     //     $product = Product::where('slug', $slug)->firstOrFail();

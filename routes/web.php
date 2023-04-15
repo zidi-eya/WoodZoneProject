@@ -18,6 +18,9 @@ use TCG\Voyager\Facades\Voyager;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::get('/search',  [App\Http\Controllers\ProductController::class, 'search'])->name('products.search');
+
 Route::get('/', function () {
     return view('Pages/index');
 });

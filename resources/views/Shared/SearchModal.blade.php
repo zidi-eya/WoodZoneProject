@@ -5,12 +5,12 @@
                 <div class="modal-content" style="background-color:#7a823a ">
                     <div class="modal-body">
                         <h2>Search Your Product</h2>
-                        <form class="navbar-form position-relative" role="search">
+                        <form class="navbar-form position-relative" action="{{ route('products.search') }}"  role="search">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search here...">
+                                <input type="text" name="q" class="form-control" value="{{ request()->q ?? '' }}" placeholder="Search here...">
                             </div>
-                            <button type="submit" class="submit-btn"><i class="pe-7s-search"></i></button>
-                        </form>
+                                <button type="submit" class="submit-btn"><i class="pe-7s-search" ></i></button>
+                        </form>    
                     </div>
                 </div>
             </div>
