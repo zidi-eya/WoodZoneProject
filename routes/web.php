@@ -56,9 +56,9 @@ Route::get('/produitDetails', function () {
     return view('Pages/produitDetails');
 });
 Route::get('/shop', [App\Http\Controllers\ProductController::class, 'index'])->name('products.shop');
-Route::get('/shopCategories', function () {
-    return view('Pages/shopCategories');
-});
+Route::get('/shopCategories', [App\Http\Controllers\CategorieController::class, 'index'])->name('pages.shopCategories');
+
+
 Route::get('/thankyou', function () {
     return view('Pages/thankyou');
 });

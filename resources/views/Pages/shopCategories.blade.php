@@ -146,407 +146,62 @@
                                 <div class="tab-content">
                                     <div class="tab-pane fade " id="shop-grid">
                                         <div class="row mb-n-30px">
-                                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up"
+                                           @foreach($products as $product) <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up"
                                                 data-aos-delay="200">
                                                 <!-- Single Prodect -->
+        
+                                                
                                                 <div class="product">
                                                     <div class="thumb">
                                                         <a href="/produitDetails" class="image">
-                                                            <img src="assets/images/product-image/1.jpg"
-                                                                alt="Product" />
+                                                            <img src="{{ asset('storage/'.$product->image) }}"
+                                                                alt="cc" />
                                                             <img class="hover-image"
-                                                                src="assets/images/product-image/1.jpg" alt="Product" />
+                                                                src="{{ asset('storage/'.$product->image) }}" alt="Product" />
                                                         </a>
                                                         <span class="badges">
                                                             <span class="new">New</span>
                                                         </span>
                                                         <div class="actions">
-                                                            <a href="/wishlist" class="action wishlist"
+                                                            <a href="/wishlist      " class="action wishlist"
                                                                 title="Wishlist"><i class="pe-7s-like"></i></a>
                                                             <a href="#" class="action quickview"
                                                                 data-link-action="quickview" title="Quick view"
                                                                 data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                                                     class="pe-7s-look"></i></a>
-                                                                
+                                                                   
                                                         </div>
                                                     </div>
                                                     <div class="content">
-                                                        <span class="ratings">
-                                                            <span class="rating-wrap">
-                                                                <span class="star" style="width: 100%"></span>
-                                                            </span>
-                                                            <span class="rating-num d-none">( 5 Review )</span>
-                                                        </span>
-                                                        <h5 class="title"><a href="/produitDetails">Hand-Made Garlic
-                                                                Mortar
+                                                        
+                                                        <h5 class="title"><a href="/produitDetails">{{ $product->title }}
                                                             </a>
                                                         </h5>
                                                         <span class="price">
-                                                            <span class="new">$38.50</span>
+                                                            <span class="new">{{ $product->price }}</span>
                                                         </span>
                                                     </div>
                                                     <a href="/cart" class=" add-to-cart">Add To Cart</a>
                                                 </div>
+                                                
+
                                             </div>
-                                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up"
-                                                data-aos-delay="400">
-                                                <!-- Single Prodect -->
-                                                <div class="product">
-                                                    <div class="thumb">
-                                                        <a href="/produitDetails" class="image">
-                                                            <img src="assets/images/product-image/2.jpg"
-                                                                alt="Product" />
-                                                            <img class="hover-image"
-                                                                src="assets/images/product-image/2.jpg" alt="Product" />
-                                                        </a>
-                                                        <span class="badges">
-                                                            <span class="sale">-10%</span>
-                                                            <span class="new">New</span>
-                                                        </span>
-                                                        <div class="actions">
-                                                            <a href="/wishlist" class="action wishlist"
-                                                                title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                            <a href="#" class="action quickview"
-                                                                data-link-action="quickview" title="Quick view"
-                                                                data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                                    class="pe-7s-look"></i></a>
-                                                                
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <span class="ratings">
-                                                            <span class="rating-wrap">
-                                                                <span class="star" style="width: 100%"></span>
-                                                            </span>
-                                                            <span class="rating-num d-none">( 5 Review )</span>
-                                                        </span>
-                                                        <h5 class="title"><a href="/produitDetails">Handmade Ceramic
-                                                                Pottery
-                                                            </a>
-                                                        </h5>
-                                                        <span class="price">
-                                                            <span class="new">$38.50</span>
-                                                            <span class="old">$45.50</span>
-                                                        </span>
-                                                    </div>
-                                                    <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                </div>
-                                                <!-- Single Prodect -->
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up"
-                                                data-aos-delay="600">
-                                                <!-- Single Prodect -->
-                                                <div class="product">
-                                                    <div class="thumb">
-                                                        <a href="/produitDetails" class="image">
-                                                            <img src="assets/images/product-image/3.jpg"
-                                                                alt="Product" />
-                                                            <img class="hover-image"
-                                                                src="assets/images/product-image/3.jpg" alt="Product" />
-                                                        </a>
-                                                        <span class="badges">
-                                                            <span class="new">Sale</span>
-                                                        </span>
-                                                        <div class="actions">
-                                                            <a href="/wishlist" class="action wishlist"
-                                                                title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                            <a href="#" class="action quickview"
-                                                                data-link-action="quickview" title="Quick view"
-                                                                data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                                    class="pe-7s-look"></i></a>
-                                                                
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <span class="ratings">
-                                                            <span class="rating-wrap">
-                                                                <span class="star" style="width: 100%"></span>
-                                                            </span>
-                                                            <span class="rating-num d-none">( 5 Review )</span>
-                                                        </span>
-                                                        <h5 class="title"><a href="/produitDetails">Hand Painted
-                                                                Bowls
-                                                            </a>
-                                                        </h5>
-                                                        <span class="price">
-                                                            <span class="new">$38.50</span>
-                                                        </span>
-                                                    </div>
-                                                    <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up"
-                                                data-aos-delay="800">
-                                                <!-- Single Prodect -->
-                                                <div class="product">
-                                                    <div class="thumb">
-                                                        <a href="/produitDetails" class="image">
-                                                            <img src="assets/images/product-image/4.jpg"
-                                                                alt="Product" />
-                                                            <img class="hover-image"
-                                                                src="assets/images/product-image/5.jpg" alt="Product" />
-                                                        </a>
-                                                        <span class="badges">
-                                                            <span class="sale">-5%</span>
-                                                        </span>
-                                                        <div class="actions">
-                                                            <a href="/wishlist" class="action wishlist"
-                                                                title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                            <a href="#" class="action quickview"
-                                                                data-link-action="quickview" title="Quick view"
-                                                                data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                                    class="pe-7s-look"></i></a>
-                                                                
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <span class="ratings">
-                                                            <span class="rating-wrap">
-                                                                <span class="star" style="width: 100%"></span>
-                                                            </span>
-                                                            <span class="rating-num d-none">( 5 Review )</span>
-                                                        </span>
-                                                        <h5 class="title"><a href="/produitDetails">Antique Wooden
-                                                                Farm Large
-                                                            </a>
-                                                        </h5>
-                                                        <span class="price">
-                                                            <span class="new">$38.50</span>
-                                                            <span class="old">$40.50</span>
-                                                        </span>
-                                                    </div>
-                                                    <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                </div>
-                                                <!-- Single Prodect -->
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up"
-                                                data-aos-delay="200">
-                                                <!-- Single Prodect -->
-                                                <div class="product">
-                                                    <div class="thumb">
-                                                        <a href="/produitDetails" class="image">
-                                                            <img src="assets/images/product-image/6.jpg"
-                                                                alt="Product" />
-                                                            <img class="hover-image"
-                                                                src="assets/images/product-image/6.jpg" alt="Product" />
-                                                        </a>
-                                                        <span class="badges">
-                                                        </span>
-                                                        <div class="actions">
-                                                            <a href="/wishlist" class="action wishlist"
-                                                                title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                            <a href="#" class="action quickview"
-                                                                data-link-action="quickview" title="Quick view"
-                                                                data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                                    class="pe-7s-look"></i></a>
-                                                                
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <span class="ratings">
-                                                            <span class="rating-wrap">
-                                                                <span class="star" style="width: 100%"></span>
-                                                            </span>
-                                                            <span class="rating-num d-none">( 5 Review )</span>
-                                                        </span>
-                                                        <h5 class="title"><a href="/produitDetails">Handmade Jute
-                                                                Basket
-                                                            </a>
-                                                        </h5>
-                                                        <span class="price">
-                                                            <span class="new">$38.50</span>
-                                                        </span>
-                                                    </div>
-                                                    <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6  mb-30px" data-aos="fade-up"
-                                                data-aos-delay="400">
-                                                <!-- Single Prodect -->
-                                                <div class="product">
-                                                    <div class="thumb">
-                                                        <a href="/produitDetails" class="image">
-                                                            <img src="assets/images/product-image/7.jpg"
-                                                                alt="Product" />
-                                                            <img class="hover-image"
-                                                                src="assets/images/product-image/7.jpg" alt="Product" />
-                                                        </a>
-                                                        <span class="badges">
-                                                            <span class="new">New</span>
-                                                        </span>
-                                                        <div class="actions">
-                                                            <a href="/wishlist" class="action wishlist"
-                                                                title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                            <a href="#" class="action quickview"
-                                                                data-link-action="quickview" title="Quick view"
-                                                                data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                                    class="pe-7s-look"></i></a>
-                                                                
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <span class="ratings">
-                                                            <span class="rating-wrap">
-                                                                <span class="star" style="width: 100%"></span>
-                                                            </span>
-                                                            <span class="rating-num d-none">( 5 Review )</span>
-                                                        </span>
-                                                        <h5 class="title"><a href="/produitDetails">Knitting yarn &
-                                                                crochet hook
-                                                            </a>
-                                                        </h5>
-                                                        <span class="price">
-                                                            <span class="new">$38.50</span>
-                                                        </span>
-                                                    </div>
-                                                    <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                </div>
-                                                <!-- Single Prodect -->
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up"
-                                                data-aos-delay="600">
-                                                <!-- Single Prodect -->
-                                                <div class="product">
-                                                    <div class="thumb">
-                                                        <a href="/produitDetails" class="image">
-                                                            <img src="assets/images/product-image/8.jpg"
-                                                                alt="Product" />
-                                                            <img class="hover-image"
-                                                                src="assets/images/product-image/8.jpg" alt="Product" />
-                                                        </a>
-                                                        <span class="badges">
-                                                            <span class="sale">-8%</span>
-                                                            <span class="new">New</span>
-                                                        </span>
-                                                        <div class="actions">
-                                                            <a href="/wishlist" class="action wishlist"
-                                                                title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                            <a href="#" class="action quickview"
-                                                                data-link-action="quickview" title="Quick view"
-                                                                data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                                    class="pe-7s-look"></i></a>
-                                                                
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <span class="ratings">
-                                                            <span class="rating-wrap">
-                                                                <span class="star" style="width: 100%"></span>
-                                                            </span>
-                                                            <span class="rating-num d-none">( 5 Review )</span>
-                                                        </span>
-                                                        <h5 class="title"><a href="/produitDetails">David Head
-                                                                Portraits
-                                                            </a>
-                                                        </h5>
-                                                        <span class="price">
-                                                            <span class="new">$38.50</span>
-                                                            <span class="old">$44.50</span>
-                                                        </span>
-                                                    </div>
-                                                    <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up"
-                                                data-aos-delay="800">
-                                                <!-- Single Prodect -->
-                                                <div class="product">
-                                                    <div class="thumb">
-                                                        <a href="/produitDetails" class="image">
-                                                            <img src="assets/images/product-image/9.jpg"
-                                                                alt="Product" />
-                                                            <img class="hover-image"
-                                                                src="assets/images/product-image/10.jpg"
-                                                                alt="Product" />
-                                                        </a>
-                                                        <span class="badges">
-                                                            <span class="new">Sale</span>
-                                                        </span>
-                                                        <div class="actions">
-                                                            <a href="/wishlist" class="action wishlist"
-                                                                title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                            <a href="#" class="action quickview"
-                                                                data-link-action="quickview" title="Quick view"
-                                                                data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                                    class="pe-7s-look"></i></a>
-                                                                
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <span class="ratings">
-                                                            <span class="rating-wrap">
-                                                                <span class="star" style="width: 100%"></span>
-                                                            </span>
-                                                            <span class="rating-num d-none">( 5 Review )</span>
-                                                        </span>
-                                                        <h5 class="title"><a href="/produitDetails">solid wood
-                                                                cherry paddle
-                                                            </a>
-                                                        </h5>
-                                                        <span class="price">
-                                                            <span class="new">$38.50</span>
-                                                        </span>
-                                                    </div>
-                                                    <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                </div>
-                                                <!-- Single Prodect -->
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up"
-                                                data-aos-delay="800">
-                                                <!-- Single Prodect -->
-                                                <div class="product">
-                                                    <div class="thumb">
-                                                        <a href="/produitDetails" class="image">
-                                                            <img src="assets/images/product-image/1.jpg"
-                                                                alt="Product" />
-                                                            <img class="hover-image"
-                                                                src="assets/images/product-image/1.jpg" alt="Product" />
-                                                        </a>
-                                                        <span class="badges">
-                                                            <span class="new">New</span>
-                                                        </span>
-                                                        <div class="actions">
-                                                            <a href="/wishlist" class="action wishlist"
-                                                                title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                            <a href="#" class="action quickview"
-                                                                data-link-action="quickview" title="Quick view"
-                                                                data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                                    class="pe-7s-look"></i></a>
-                                                                
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <span class="ratings">
-                                                            <span class="rating-wrap">
-                                                                <span class="star" style="width: 100%"></span>
-                                                            </span>
-                                                            <span class="rating-num d-none">( 5 Review )</span>
-                                                        </span>
-                                                        <h5 class="title"><a href="/produitDetails">Hand-Made Garlic
-                                                                Mortar
-                                                            </a>
-                                                        </h5>
-                                                        <span class="price">
-                                                            <span class="new">$38.50</span>
-                                                        </span>
-                                                    </div>
-                                                    <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                </div>
-                                                <!-- Single Prodect -->
-                                            </div>
+                                            @endforeach
+                                         
                                         </div>
                                     </div>
                                     <div class="tab-pane fade show active" id="shop-list">
                                         <div class="shop-list-wrapper">
+                                        @foreach($products as $product) 
                                             <div class="row">
                                                 <div class="col-md-5 col-lg-5 col-xl-4">
                                                     <div class="product">
                                                         <div class="thumb">
                                                             <a href="/produitDetails" class="image">
-                                                                <img src="assets/images/product-image/1.jpg"
+                                                                <img src="{{ asset('storage/'.$product->image) }}"
                                                                     alt="Product" />
                                                                 <img class="hover-image"
-                                                                    src="assets/images/product-image/1.jpg"
+                                                                    src="{{ asset('storage/'.$product->image) }}"
                                                                     alt="Product" />
                                                             </a>
                                                             <span class="badges">
@@ -564,17 +219,13 @@
                                                                 </span>
                                                                 <span class="rating-num d-none">( 5 Review )</span>
                                                             </span>
-                                                            <h5 class="title"><a href="/produitDetails">Hand-Made Garlic
-                                                                Mortar
+                                                            <h5 class="title"><a href="/produitDetails">{{ $product->title }}
                                                             </a></h5>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                                                sed do eiusmodol tempor incididunt ut labore et dolore
-                                                                magna aliqua. Ut enim ad minim veni quis nostrud
-                                                                exercitation ullamco laboris </p>
+                                                            <p>{{ $product->description }} </p>
                                                         </div>
                                                         <div class="box-inner">
                                                             <span class="price">
-                                                                <span class="new">$38.50</span>
+                                                                <span class="new">{{ $product->price }}</span>
                                                             </span>
                                                             <div class="actions">
                                                                 <a href="/wishlist" class="action wishlist"
@@ -591,452 +242,11 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="shop-list-wrapper">
-                                            <div class="row">
-                                                <div class="col-md-5 col-lg-5 col-xl-4">
-                                                    <div class="product">
-                                                        <div class="thumb">
-                                                            <a href="/produitDetails" class="image">
-                                                                <img src="assets/images/product-image/2.jpg"
-                                                                    alt="Product" />
-                                                                <img class="hover-image"
-                                                                    src="assets/images/product-image/2.jpg"
-                                                                    alt="Product" />
-                                                            </a>
-                                                            <span class="badges">
-                                                                <span class="sale">-10%</span>
-                                                                <span class="new">New</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-7 col-xl-8">
-                                                    <div class="content-desc-wrap">
-                                                        <div class="content">
-                                                            <span class="ratings">
-                                                                <span class="rating-wrap">
-                                                                    <span class="star" style="width: 80%"></span>
-                                                                </span>
-                                                                <span class="rating-num d-none">( 4 Review )</span>
-                                                            </span>
-                                                            <h5 class="title"><a href="/produitDetails">Handmade Ceramic
-                                                                Pottery
-                                                            </a>
-                                                            </h5>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                                                sed do eiusmodol tempor incididunt ut labore et dolore
-                                                                magna aliqua. Ut enim ad minim veni quis nostrud
-                                                                exercitation ullamco laboris </p>
-                                                        </div>
-                                                        <div class="box-inner">
-                                                            <span class="price">
-                                                                <span class="new">$38.50</span>
-                                                                <span class="old">$48.50</span>
-                                                            </span>
-                                                            <div class="actions">
-                                                                <a href="/wishlist" class="action wishlist"
-                                                                    title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                                <a href="#" class="action quickview"
-                                                                    data-link-action="quickview" title="Quick view"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#exampleModal"><i
-                                                                        class="pe-7s-search"></i></a>
-                                                                      
-                                                            </div>
-                                                            <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="shop-list-wrapper">
-                                            <div class="row">
-                                                <div class="col-md-5 col-lg-5 col-xl-4">
-                                                    <div class="product">
-                                                        <div class="thumb">
-                                                            <a href="/produitDetails" class="image">
-                                                                <img src="assets/images/product-image/3.jpg"
-                                                                    alt="Product" />
-                                                                <img class="hover-image"
-                                                                    src="assets/images/product-image/3.jpg"
-                                                                    alt="Product" />
-                                                            </a>
-                                                            <span class="badges">
-                                                                <span class="sale">-7%</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-7 col-xl-8">
-                                                    <div class="content-desc-wrap">
-                                                        <div class="content">
-                                                            <span class="ratings">
-                                                                <span class="rating-wrap">
-                                                                    <span class="star" style="width: 0%"></span>
-                                                                </span>
-                                                                <span class="rating-num d-none">( 0 Review )</span>
-                                                            </span>
-                                                            <h5 class="title"><a href="/produitDetails">Hand Painted
-                                                                Bowls
-                                                            </a></h5>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                                                sed do eiusmodol tempor incididunt ut labore et dolore
-                                                                magna aliqua. Ut enim ad minim veni quis nostrud
-                                                                exercitation ullamco laboris </p>
-                                                        </div>
-                                                        <div class="box-inner">
-                                                            <span class="price">
-                                                                <span class="new">$38.50</span>
-                                                                <span class="old">$45.00</span>
-                                                            </span>
-                                                            <div class="actions">
-                                                                <a href="/wishlist" class="action wishlist"
-                                                                    title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                                <a href="#" class="action quickview"
-                                                                    data-link-action="quickview" title="Quick view"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#exampleModal"><i
-                                                                        class="pe-7s-search"></i></a>
-                                                                      
-                                                            </div>
-                                                            <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="shop-list-wrapper">
-                                            <div class="row">
-                                                <div class="col-md-5 col-lg-5 col-xl-4">
-                                                    <div class="product">
-                                                        <div class="thumb">
-                                                            <a href="/produitDetails" class="image">
-                                                                <img src="assets/images/product-image/4.jpg"
-                                                                    alt="Product" />
-                                                                <img class="hover-image"
-                                                                    src="assets/images/product-image/4.jpg"
-                                                                    alt="Product" />
-                                                            </a>
-                                                            <span class="badges">
-                                                                <span class="new">Sale</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-7 col-xl-8">
-                                                    <div class="content-desc-wrap">
-                                                        <div class="content">
-                                                            <span class="ratings">
-                                                                <span class="rating-wrap">
-                                                                    <span class="star" style="width: 70%"></span>
-                                                                </span>
-                                                                <span class="rating-num d-none">( 3.5 Review )</span>
-                                                            </span>
-                                                            <h5 class="title"><a href="/produitDetails">Antique Wooden
-                                                                Farm Large
-                                                            </a></h5>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                                                sed do eiusmodol tempor incididunt ut labore et dolore
-                                                                magna aliqua. Ut enim ad minim veni quis nostrud
-                                                                exercitation ullamco laboris </p>
-                                                        </div>
-                                                        <div class="box-inner">
-                                                            <span class="price">
-                                                                <span class="new">$38.50</span>
-                                                            </span>
-                                                            <div class="actions">
-                                                                <a href="/wishlist" class="action wishlist"
-                                                                    title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                                <a href="#" class="action quickview"
-                                                                    data-link-action="quickview" title="Quick view"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#exampleModal"><i
-                                                                        class="pe-7s-search"></i></a>
-                                                                      
-                                                            </div>
-                                                            <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="shop-list-wrapper">
-                                            <div class="row">
-                                                <div class="col-md-5 col-lg-5 col-xl-4">
-                                                    <div class="product">
-                                                        <div class="thumb">
-                                                            <a href="/produitDetails" class="image">
-                                                                <img src="assets/images/product-image/5.jpg"
-                                                                    alt="Product" />
-                                                                <img class="hover-image"
-                                                                    src="assets/images/product-image/5.jpg"
-                                                                    alt="Product" />
-                                                            </a>
-                                                            <span class="badges">
-                                                                <span class="sale">-5%</span>
-                                                                <span class="new">New</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-7 col-xl-8">
-                                                    <div class="content-desc-wrap">
-                                                        <div class="content">
-                                                            <span class="ratings">
-                                                                <span class="rating-wrap">
-                                                                    <span class="star" style="width: 100%"></span>
-                                                                </span>
-                                                                <span class="rating-num d-none">( 5 Review )</span>
-                                                            </span>
-                                                            <h5 class="title"><a href="/produitDetails">Handmade Jute
-                                                                Basket
-                                                            </a></h5>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                                                sed do eiusmodol tempor incididunt ut labore et dolore
-                                                                magna aliqua. Ut enim ad minim veni quis nostrud
-                                                                exercitation ullamco laboris </p>
-                                                        </div>
-                                                        <div class="box-inner">
-                                                            <span class="price">
-                                                                <span class="new">$38.50</span>
-                                                                <span class="old">$45.50</span>
-                                                            </span>
-                                                            <div class="actions">
-                                                                <a href="/wishlist" class="action wishlist"
-                                                                    title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                                <a href="#" class="action quickview"
-                                                                    data-link-action="quickview" title="Quick view"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#exampleModal"><i
-                                                                        class="pe-7s-search"></i></a>
-                                                                      
-                                                            </div>
-                                                            <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="shop-list-wrapper">
-                                            <div class="row">
-                                                <div class="col-md-5 col-lg-5 col-xl-4">
-                                                    <div class="product">
-                                                        <div class="thumb">
-                                                            <a href="/produitDetails" class="image">
-                                                                <img src="assets/images/product-image/6.jpg"
-                                                                    alt="Product" />
-                                                                <img class="hover-image"
-                                                                    src="assets/images/product-image/6.jpg"
-                                                                    alt="Product" />
-                                                            </a>
-                                                            <span class="badges">
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-7 col-xl-8">
-                                                    <div class="content-desc-wrap">
-                                                        <div class="content">
-                                                            <span class="ratings">
-                                                                <span class="rating-wrap">
-                                                                    <span class="star" style="width: 100%"></span>
-                                                                </span>
-                                                                <span class="rating-num d-none">( 5 Review )</span>
-                                                            </span>
-                                                            <h5 class="title"><a href="/produitDetails">Knitting yarn &
-                                                                crochet hook
-                                                            </a> </h5>
+                                            <br>                                            <br>
 
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                                                sed do eiusmodol tempor incididunt ut labore et dolore
-                                                                magna aliqua. Ut enim ad minim veni quis nostrud
-                                                                exercitation ullamco laboris </p>
-                                                        </div>
-                                                        <div class="box-inner">
-                                                            <span class="price">
-                                                                <span class="new">$38.50</span>
-                                                            </span>
-                                                            <div class="actions">
-                                                                <a href="/wishlist" class="action wishlist"
-                                                                    title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                                <a href="#" class="action quickview"
-                                                                    data-link-action="quickview" title="Quick view"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#exampleModal"><i
-                                                                        class="pe-7s-search"></i></a>
-                                                                      
-                                                            </div>
-                                                            <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
-                                        <div class="shop-list-wrapper">
-                                            <div class="row">
-                                                <div class="col-md-5 col-lg-5 col-xl-4">
-                                                    <div class="product">
-                                                        <div class="thumb">
-                                                            <a href="/produitDetails" class="image">
-                                                                <img src="assets/images/product-image/7.jpg"
-                                                                    alt="Product" />
-                                                                <img class="hover-image"
-                                                                    src="assets/images/product-image/7.jpg"
-                                                                    alt="Product" />
-                                                            </a>
-                                                            <span class="badges">
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-7 col-xl-8">
-                                                    <div class="content-desc-wrap">
-                                                        <div class="content">
-                                                            <span class="ratings">
-                                                                <span class="rating-wrap">
-                                                                    <span class="star" style="width: 80%"></span>
-                                                                </span>
-                                                                <span class="rating-num d-none">( 4 Review )</span>
-                                                            </span>
-                                                            <h5 class="title"><a href="/produitDetails">David Head
-                                                                Portraits
-                                                            </a></h5>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                                                sed do eiusmodol tempor incididunt ut labore et dolore
-                                                                magna aliqua. Ut enim ad minim veni quis nostrud
-                                                                exercitation ullamco laboris </p>
-                                                        </div>
-                                                        <div class="box-inner">
-                                                            <span class="price">
-                                                                <span class="new">$38.50</span>
-                                                            </span>
-                                                            <div class="actions">
-                                                                <a href="/wishlist" class="action wishlist"
-                                                                    title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                                <a href="#" class="action quickview"
-                                                                    data-link-action="quickview" title="Quick view"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#exampleModal"><i
-                                                                        class="pe-7s-search"></i></a>
-                                                                      
-                                                            </div>
-                                                            <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="shop-list-wrapper">
-                                            <div class="row">
-                                                <div class="col-md-5 col-lg-5 col-xl-4">
-                                                    <div class="product">
-                                                        <div class="thumb">
-                                                            <a href="/produitDetails" class="image">
-                                                                <img src="assets/images/product-image/8.jpg"
-                                                                    alt="Product" />
-                                                                <img class="hover-image"
-                                                                    src="assets/images/product-image/8.jpg"
-                                                                    alt="Product" />
-                                                            </a>
-                                                            <span class="badges">
-                                                                <span class="new">Sale</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-7 col-xl-8">
-                                                    <div class="content-desc-wrap">
-                                                        <div class="content">
-                                                            <span class="ratings">
-                                                                <span class="rating-wrap">
-                                                                    <span class="star" style="width: 60%"></span>
-                                                                </span>
-                                                                <span class="rating-num d-none">( 3 Review )</span>
-                                                            </span>
-                                                            <h5 class="title"><a href="/produitDetails">solid wood
-                                                                cherry paddle
-                                                            </a></h5>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                                                sed do eiusmodol tempor incididunt ut labore et dolore
-                                                                magna aliqua. Ut enim ad minim veni quis nostrud
-                                                                exercitation ullamco laboris </p>
-                                                        </div>
-                                                        <div class="box-inner">
-                                                            <span class="price">
-                                                                <span class="new">$38.50</span>
-                                                            </span>
-                                                            <div class="actions">
-                                                                <a href="/wishlist" class="action wishlist"
-                                                                    title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                                <a href="#" class="action quickview"
-                                                                    data-link-action="quickview" title="Quick view"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#exampleModal"><i
-                                                                        class="pe-7s-search"></i></a>
-                                                                      
-                                                            </div>
-                                                            <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="shop-list-wrapper">
-                                            <div class="row">
-                                                <div class="col-md-5 col-lg-5 col-xl-4">
-                                                    <div class="product">
-                                                        <div class="thumb">
-                                                            <a href="/produitDetails" class="image">
-                                                                <img src="assets/images/product-image/9.jpg"
-                                                                    alt="Product" />
-                                                                <img class="hover-image"
-                                                                    src="assets/images/product-image/9.jpg"
-                                                                    alt="Product" />
-                                                            </a>
-                                                            <span class="badges">
-                                                                <span class="new">Sale</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-7 col-xl-8">
-                                                    <div class="content-desc-wrap">
-                                                        <div class="content">
-                                                            <span class="ratings">
-                                                                <span class="rating-wrap">
-                                                                    <span class="star" style="width: 60%"></span>
-                                                                </span>
-                                                                <span class="rating-num d-none">( 3 Review )</span>
-                                                            </span>
-                                                            <h5 class="title"><a href="/produitDetails">Hand-Made Garlic
-                                                                Mortar
-                                                            </a></h5>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                                                sed do eiusmodol tempor incididunt ut labore et dolore
-                                                                magna aliqua. Ut enim ad minim veni quis nostrud
-                                                                exercitation ullamco laboris </p>
-                                                        </div>
-                                                        <div class="box-inner">
-                                                            <span class="price">
-                                                                <span class="new">$38.50</span>
-                                                            </span>
-                                                            <div class="actions">
-                                                                <a href="/wishlist" class="action wishlist"
-                                                                    title="Wishlist"><i class="pe-7s-like"></i></a>
-                                                                <a href="#" class="action quickview"
-                                                                    data-link-action="quickview" title="Quick view"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#exampleModal"><i
-                                                                        class="pe-7s-search"></i></a>
-                                                                      
-                                                            </div>
-                                                            <a href="/cart" class=" add-to-cart">Add To Cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1069,35 +279,22 @@
                             <h4 class="sidebar-title">Categories</h4>
                             <div class="sidebar-widget-category">
                                 <ul>
-                                    <li><a href="#" class="selected m-0"><i class="fa fa-angle-right"></i> All
-                                            <span>(65)</span> </a></li>
-                                    <li><a href="#" class=""><i class="fa fa-angle-right"></i> Trays and Plates
-                                            <span>(12)</span> </a></li>
-                                    <li><a href="#" class=""><i class="fa fa-angle-right"></i> Cutting Boards
-                                            <span>(22)</span> </a></li>
-                                    <li><a href="#" class=""><i class="fa fa-angle-right"></i> Jars and Containers
-                                            <span>(19)</span> </a></li>
-                                    <li><a href="#" class=""><i class="fa fa-angle-right"></i> Drinkware and Tumblers
-                                            <span>(17)</span> </a></li>
-                                    <li><a href="#" class=""><i class="fa fa-angle-right"></i> Spoons ans Spatulas
-                                            <span>(7)</span> </a></li>
-                                    <li><a href="#" class=""><i class="fa fa-angle-right"></i> Bowls and Baskets
-                                            <span>(9)</span> </a></li>
-                                    <li><a href="#" class=""><i class="fa fa-angle-right"></i> Mortars and Pestles
-                                            <span>(9)</span> </a></li>
-                                    <li><a href="#" class=""><i class="fa fa-angle-right"></i> Utensils and Gadgets
-                                            <span>(9)</span> </a></li>
-                                    <li><a href="#" class=""><i class="fa fa-angle-right"></i> Bath and Beauty
-                                            <span>(9)</span> </a></li>
-                                    <li><a href="#" class=""><i class="fa fa-angle-right"></i> Chess Sets
-                                            <span>(9)</span> </a></li>
-                                    <li><a href="#" class=""><i class="fa fa-angle-right"></i> Gift Sets
-                                            <span>(9)</span> </a></li>
+                                <li><a href="#" class="selected m-0"><i class="fa fa-angle-right"></i> All
+                                            <span>(65)</span> </a></li> 
+                                @foreach($categories as $categorie)
+                                    
+                                            <li><a href="#" class="selected m-0"><i class="fa fa-angle-right"></i> {{ $categorie->nameCategorie }}
+                                            <span>(65)</span> </a></li> 
+                                            @endforeach
+                                   
+                                    
+                                   
+                                    
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="sidebar-widget">
+                        <!-- <div class="sidebar-widget">
                             <h4 class="sidebar-title">Size</h4>
                             <div class="sidebar-widget-size">
                                 <ul>
@@ -1113,7 +310,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Sidebar single item -->
                         <!-- Sidebar single item -->
                         <div class="sidebar-widget mt-8">
